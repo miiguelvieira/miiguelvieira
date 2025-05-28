@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Dra. Juliana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu Superior -->
+    <nav class="top-menu">
+        <div class="nav-links">
+            <a href="index.html" class="home-icon"><i class="fas fa-tooth"></i></a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="agendamento.html">Agendamento</a> 
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Seção Esquerda (Formulário) -->
+        <div class="left-section">
+            <h1>Agende Sua Consulta</h1>
+            <form id="formAgendamento" class="agendamento-form">
+                <div class="form-group">
+                    <label>Nome Completo:</label>
+                    <input type="text" name="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label>E-mail:</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Telefone:</label>
+                    <input type="tel" name="telefone" pattern="[0-9]{11}" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Data Preferencial:</label>
+                    <input type="date" name="data" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Horário:</label>
+                    <select name="horario" required>
+                        <option>08:00</option>
+                        <option>09:00</option>
+                        <option>10:00</option>
+                        <option>11:00</option>
+                        <option>12:00</option>
+                        <option>13:00</option>
+                        <option>14:00</option>
+                        <option>15:00</option>
+                        <option>16:00</option>
+                        <option>17:00</option>
+                        <option>18:00</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-agendar">Confirmar Agendamento</button>
+            </form>
+        </div>
+
+        <!-- Seção Direita (Imagem) -->
+        <div class="right-section">
+            <div class="image-container">
+                <img src="./img/ju2.png" alt="Dra. Juliana">
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>  </h4>
+                <div class="footer-links">
+                    <a href="portfolio.html">Portfólio</a>
+                    <a href="agendamento.html">Agendamento</a>
+                    <a href="sobre.html">Sobre</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Av. Principal, 123 - Centro</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@draJuliana.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(21) 98774-5967</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="://wwwhttps.instagram.com/drajulianacunha.dentista?igsh=MTRkMmlxM200Zmt2cg=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5521987745967"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <img src="./img/tahiti.PNG" alt="Selo Invisalign" class="invisalign-selo">
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>Copyright © 2025 - Dr. Juliana Fagundes</p>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5521987745967" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Script de Integração -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx7oF-T-bGhrq_D6I3JMMgIvimk7WYws7SohVdn7y3odfWkdaFNmeZOINaIcNMD-atq/exec';
+        const form = document.getElementById('formAgendamento');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    alert('Agendamento enviado! Entraremos em contato para confirmação.');
+                    form.reset();
+                })
+                .catch(error => {
+                    alert('Erro! Use o botão do WhatsApp para agendar.');
+                    console.error('Error!', error.message);
+                })
+        });
+    </script>
+</body>
+</html>

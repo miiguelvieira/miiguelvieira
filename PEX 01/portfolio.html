@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Dra. Juliana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu Superior -->
+    <nav class="top-menu">
+        <div class="nav-links">
+            <a href="index.html" class="home-icon"><i class="fas fa-tooth"></i></a>
+            <!--<a href="servicos.html">Serviços</a>
+            <a href="invisalign.html">Invisalign</a> -->
+            <a href="portfolio.html">Portfólio</a>
+            <a href="agendamento.html">Agendamento</a> 
+            <a href="sobre.html">Sobre</a>
+        </div>
+    </nav>
+
+
+    <!-- Conteúdo Principal -->
+    <main class="portfolio-container">
+        <h1>Nossos Resultados</h1>
+        
+        <!-- Galeria -->
+        <div class="portfolio-grid">
+            <!-- Primeira Linha (3 imagens) -->
+            <div class="portfolio-item" onclick="openLightbox('img/wpp1.jpeg')">
+                <img src="img/wpp1.jpeg" alt="Caso 1">
+                <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox('img/wpp2.jpeg')">
+                <img src="img/wpp2.jpeg" alt="Caso 2">
+                <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox('img/wpp3.jpeg')">
+                <img src="img/wpp3.jpeg" alt="Caso 3">
+                <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+
+            <!-- Segunda Linha (2 imagens) -->
+            <div class="portfolio-item" onclick="openLightbox('img/wpp4.jpeg')">
+                <img src="img/wpp4.jpeg" alt="Caso 4">
+                <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+
+            <div class="portfolio-item" onclick="openLightbox('img/wpp5.jpeg')">
+                <img src="img/wpp5.jpeg" alt="Caso 5">
+                <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>
+    </main>
+
+    <!-- Rodapé (Cole o mesmo do index.html) -->
+    <footer>
+    
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>  </h4>
+                <div class="footer-links">
+                    <!--<a href="servicos.html">Serviços</a>
+                    <a href="invisalign.html">Invisalign</a> -->
+                    <a href="portfolio.html">Portfólio</a>
+                    <a href="agendamento.html">Agendamento</a>
+                    <a href="sobre.html">Sobre</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <h5>   </h5>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Av. Principal, 123 - Centro</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@draJuliana.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(21) 98774-5967</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/drajulianacunha.dentista?igsh=MTRkMmlxM200Zmt2cg=="><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5521987745967"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <img
+                    src="./img/tahiti.PNG"
+                    alt="Selo Invisalign"
+                    class="invisalign-selo">
+                    <!--style="width: 150px"  FORÇA o tamanho diretamente na tag -->
+    
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center;">
+            <p>Copyright © 2025 - Dr. Juliana Fagundes</p>
+        </div>
+    
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5521987745967" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
